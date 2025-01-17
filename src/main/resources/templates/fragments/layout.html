@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head th:fragment="head">
+
+    <link rel="stylesheet" th:href="@{/styles/style1.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/styles/bootstrap.min.css}" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://localhost:35729/livereload.js"></script>
+</head>
+<body>
+    <header  th:fragment="header">
+        <h3>Pojišťovna</h3>
+            <nav>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar() ><a href="#" ><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li><a class="nav-link text-white" th:href="@{/insured}">Pojištěnci</a></li>
+                    <li><a class="nav-link text-white" th:href="@{/insurance}">Pojištění</a></li>
+                    <li><a class="nav-link text-white" th:href="@{/contact}">Kontakt</a></li>
+                    <li sec:authorize="isAnonymous()"><a class="nav-link text-white" th:href="@{/account/login}">Přihlásit se</a></li>
+                    <li sec:authorize="isAnonymous()"><a class="nav-link text-white" th:href="@{/account/register}">Registrovat</a></li>
+                    <li>
+                        <form method="post" th:action="@{/account/logout}">
+                            <button class="nav-button" sec:authorize="isAuthenticated()">Odhlásit se</button>
+                        </form>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="hideOnMobile"><a th:href="@{/insured}"><h5>Pojištěnci</h5></a></li>
+                    <li class="hideOnMobile"><a  th:href="@{/insurance}"><h5>Pojištění</h5></a></li>
+                    <li class="hideOnMobile"><a  th:href="@{/contact}"><h5>Kontakt</h5></a></li>
+                    <li class="hideOnMobile" sec:authorize="isAnonymous()"><a  th:href="@{/account/login}"><h5>Přihlásit se</h5></a></li>
+                    <li class="hideOnMobile" sec:authorize="isAnonymous()"><a  th:href="@{/account/register}"><h5>Registrovat</h5></a></li>
+                    <li class="hideOnMobile">
+                        <form method="post" th:action="@{/account/logout}">
+                            <button class="nav-button" sec:authorize="isAuthenticated()"><h5>Odhlásit se</h5></button>
+                        </form>
+                    </li>
+                    <li class="menu-button " onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                </ul>
+            </nav>
+        <script src="/scripts/index.js"></script>
+    </header>
+
+    <footer th:fragment="footer">
+        <h3 sec:authorize="hasRole('ADMIN')">ADMIN</h3>
+    </footer>
+</body>
+</html>

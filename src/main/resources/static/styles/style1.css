@@ -1,0 +1,170 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    margin: 5% 25% 5% 25%;
+    flex-grow: 1;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    max-height: 100px
+    color: white;
+    background: #414042;
+}
+
+footer h3 {
+    margin: 0;
+    color: white;
+}
+
+.images {
+    height: 150px;
+    width: 150px;
+}
+
+header {
+    background: #414042;
+    width: 100%;
+    min-height: 80px;
+    max-height: 100px
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h3 {
+    color: white;
+    margin: 0;
+}
+
+header h5 {
+    margin: 0;
+}
+
+nav {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul a {
+    padding: 0 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #414042;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sidebar ul {
+
+    align-items: center;
+}
+
+.sidebar li {
+    width: 100%;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sidebar a {
+    margin-top: 30px
+    width: 100%;
+    text-align: center;
+}
+
+.menu-button {
+    color: white;
+    display: none;
+}
+
+nav a:hover {
+    color: #808080;
+}
+
+nav button:hover {
+    color: #808080;
+
+}
+
+nav a:active {
+    color: #808080;
+}
+
+@media(min-width: 900px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media(max-width: 900px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+        fill: #FFFFFF;
+    }
+}
+
+@media(max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
