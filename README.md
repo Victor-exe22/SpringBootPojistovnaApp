@@ -1,6 +1,6 @@
 SpringBootPojistovna 
 
-![image alt](https://github.com/Victor-exe22/SpringBootPojistovnaFinal/blob/2e7ea74450be51bf6a04a78d25d8be9fde68dfd4/Screenshot%202025-01-16%20124230.png)
+![image alt](https://github.com/Victor-exe22/SpringBootPojistovnaApp/blob/3a76dc6a13322da36c7c5c1784ab128838041a45/Screenshot%202025-01-17%20184954.png)
 My first Spring Boot application is designed for employees in insurance companies. They can add, edit, delete, or view details. 
 If the user is not logged in, they can only see the types of insurance the company offers. Once an employee logs in, they have 
 full control over customer data (add, edit, delete). If an admin logs in, they can also manage the insurance offers in the same way.
