@@ -5,6 +5,6 @@ My first Spring Boot application is designed for employees in insurance companie
 If the user is not logged in, they can only see the types of insurance the company offers. Once an employee logs in, they have 
 full control over customer data (add, edit, delete). If an admin logs in, they can also manage the insurance offers in the same way.
 
-Moje první aplikace ve Spring Boot je navržena pro zaměstnance v pojišťovnách. Ti mohou přidávat, upravovat, mazat nebo zobrazit detaily. 
-Pokud není uživatel přihlášený, může vidět pouze typy pojištění, které pojišťovna nabízí. Jakmile se zaměstnanec přihlásí, může plně spravovat 
-data klientů (přidávat, upravovat, mazat). Pokud se přihlásí admin, může spravovat také nabídku pojištění stejným způsobem.
+Moje první aplikace ve Spring Boot je navržena pro zaměstnance pojišťoven. Ti mohou přidávat, upravovat, mazat nebo zobrazovat detaily. Pokud není uživatel
+přihlášený, může vidět pouze typy pojištění, které pojišťovna nabízí. Jakmile se zaměstnanec přihlásí, může plně spravovat data klientů (přidávat, upravovat, 
+mazat). Pokud se přihlásí administrátor, může spravovat také nabídku pojištění stejným způsobem.
